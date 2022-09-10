@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Comment Form</title>
+	<!-- below we are including the jQuery and jQuery plugin .js files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		// user have to use id for form and call validate method
+		$("#commonForm").validate();
+	</script>
+</head>
+
+<body>
+	<form class="cmxform" id="commonForm" method="get" action="form-handler.html" autocomplete="off">
+		<fieldset>
+			<legend>GFG Form</legend>
+			
+<p>
+				<label for="cname">Name <span>(required at least 2 character)</span></label>
+				<!--User have to set the constraints in attribute form-->
+				<input id="cname" name="name" minlength="2" type="text" required></input>
+			</p>
+
+			
+<p>
+				<label for="cemail">Email <span>(required, won't be published)</span></label>
+				<input id="cemail" type="email" name="email" required></input>
+			</p>
+
+			
+<p>
+				<label for="curl">URL <span>(Optional)</span></label>
+				<input id="curl" type="url" name="url"></input>
+			</p>
+
+			
+<p>
+				<label for="ccomment">Your comment<span>(required)</span></label>
+				<textarea id="ccomment" name="comment" required></textarea>
+			</p>
+
+			
+<p>
+				<input class="submit" type="submit" value="submit">
+			</p>
+
+		</fieldset>
+	</form>
+</body>
+
+</html>
